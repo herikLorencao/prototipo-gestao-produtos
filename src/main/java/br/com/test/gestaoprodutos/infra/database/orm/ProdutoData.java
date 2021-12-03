@@ -39,6 +39,15 @@ public class ProdutoData {
 	@ManyToOne
 	private FornecedorData fornecedor;
 
+	public ProdutoData( Long codigo, String descricao, LocalDate dataFabricacao, LocalDate dataValidade, Situacao situacao, FornecedorData fornecedor ) {
+		this.codigo = codigo;
+		this.descricao = descricao;
+		this.dataFabricacao = dataFabricacao;
+		this.dataValidade = dataValidade;
+		this.situacao = situacao;
+		this.fornecedor = fornecedor;
+	}
+
 	public FornecedorData getFornecedor() {
 		return fornecedor;
 	}

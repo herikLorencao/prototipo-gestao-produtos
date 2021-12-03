@@ -37,6 +37,14 @@ public class FornecedorData {
 	@OneToMany( mappedBy = "fornecedor", orphanRemoval = true )
 	private List<ProdutoData> produtos = new ArrayList<>();
 
+	public FornecedorData( Long id, String descricao, String cpnj, Situacao situacao, List<ProdutoData> produtos ) {
+		this.id = id;
+		this.descricao = descricao;
+		this.cpnj = cpnj;
+		this.situacao = situacao;
+		this.produtos = produtos;
+	}
+
 	public String getCpnj() {
 		return cpnj;
 	}
