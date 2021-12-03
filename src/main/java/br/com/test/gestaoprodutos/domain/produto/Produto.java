@@ -15,7 +15,7 @@ public class Produto {
 	private Situacao situacao;
 
 	public Produto( Long codigo, String descricao, LocalDate dataFabricacao, LocalDate dataValidade, Fornecedor fornecedor, Situacao situacao ) {
-		if (datasFabricacaoValidadeSaoValidas( dataFabricacao, dataValidade ))
+		if (!datasFabricacaoValidadeSaoValidas( dataFabricacao, dataValidade ))
 			throw new DatasInvalidas(this);
 
 		this.codigo = codigo;
