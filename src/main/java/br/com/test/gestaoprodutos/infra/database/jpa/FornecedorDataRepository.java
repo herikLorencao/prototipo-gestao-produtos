@@ -1,4 +1,4 @@
-package br.com.test.gestaoprodutos.infra.database.repositories;
+package br.com.test.gestaoprodutos.infra.database.jpa;
 
 import br.com.test.gestaoprodutos.infra.database.orm.FornecedorData;
 import org.springframework.data.repository.PagingAndSortingRepository;

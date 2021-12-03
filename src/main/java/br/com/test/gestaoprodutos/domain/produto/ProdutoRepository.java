@@ -1,10 +1,8 @@
 package br.com.test.gestaoprodutos.domain.produto;
 
-import java.util.List;
-
-public interface ProdutoRepository {
+public interface ProdutoRepository<T, V> {
 	Produto buscar(Long codigo);
-	List<Produto> listarAtivos();
+	T listar(V dadosPaginacao);
 	Produto cadastrar( Produto produto);
 	Produto alterar( Produto produto);
 	void remover(Long codigo);
